@@ -30,8 +30,8 @@ defmodule Ueberauth.Strategy.Facebook.OAuth do
 
     opts =
       @defaults
-      |> Keyword.merge(config)
       |> Keyword.merge(opts)
+      |> Keyword.merge(config)
 
     OAuth2.Client.new(opts)
   end
